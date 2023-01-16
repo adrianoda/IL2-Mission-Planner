@@ -33,7 +33,7 @@
     ;
 
     var map, mapTiles, mapConfig, drawnItems, drawnMarkers, hiddenLayers, frontline,
-            drawControl, selectedMapIndex;
+            drawControl, selectedMapIndex, stopwatchControl, stopwatchVisible;
 
     var state = {
         units: window.localStorage.getItem('units') || 'metric',
@@ -1220,6 +1220,30 @@
     frontline = L.featureGroup();
     map.addLayer(frontline);
     hiddenLayers = L.featureGroup();
+
+    L.Control.Stopwatch = L.Control.extend({
+        onAdd: function(map) {
+            var stopwatch = L.DomUtil.create('iframe');
+    
+            stopwatch.src = 'https://serverror.github.io/stopwatch/';
+            stopwatch.style.height = '145px';
+            stopwatch.style.width = '270px';
+            stopwatch.style.border = '0px';
+
+            //L.DomEvent.on();
+    
+            return stopwatch;
+        },
+    
+        onRemove: function(map) {
+            //L.DomEvent.off();
+        }
+    });
+    
+    L.control.stopwatch = function(opts) {
+        return new L.Control.Stopwatch(opts);
+    };
+    
 /* // Debugging
     var boundsTestLatLngs = [
         [mapConfig.latMin, mapConfig.lngMin],
@@ -1514,6 +1538,21 @@
                 clickFn: function() {
                     if (util.flightPlanPresent(drawnItems)) {
                         util.download('csv_IL2MPR_r' + EXPORT_REV + '.csv', util.csvConvert(exportMapToCSV()));
+                    }
+                }
+            },
+            {
+                id: 'stopwatch-button',
+                icon: 'fa-clock-o',
+                tooltip: content.stopwatchTooltip,
+                clickFn: function() {
+                    if (!stopwatchVisible){
+                        stopwatchControl = L.control.stopwatch({ position: 'bottomleft' }).addTo(map);
+                        stopwatchVisible = true;
+                    }
+                    else {
+                        stopwatchControl.remove();
+                        stopwatchVisible = false;
                     }
                 }
             },

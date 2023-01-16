@@ -274,6 +274,7 @@ module.exports = (function() {
         gridHopTooltip: 'Jump to grid',
         missionHopTooltip: 'Jump to mission',
         settingsTooltip: 'Settings',
+        stopwatchTooltip: 'Stopwatch',
         streamTooltip: (conf.streaming === true) ? 'Stream mission plan' : 'Streaming disabled on this server',
         flightModalTemplate: fs.readFileSync('app/html/flightModal.html', 'utf8'),
         flightTurnModalTemplate: fs.readFileSync('app/html/flightTurnModal.html', 'utf8'),
