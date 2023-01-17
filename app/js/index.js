@@ -662,6 +662,8 @@
                 element.select();
                 var typeSelect = document.getElementById('point-type-select');
                 typeSelect.value = target.type;
+                var ddSelect = document.getElementById('point-type-select').msDropdown;
+                ddSelect.updateUiAndValue();
                 var colorSelect = document.getElementById('point-color-select');
                 colorSelect.value = target.color;
                 var photoSelect = document.getElementById('target-photo');

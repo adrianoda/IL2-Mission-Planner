@@ -9,110 +9,119 @@
         </div>
         <div class="row">
             <label for="point-type-select">Type</label>
-            <select class="u-full-width" id="point-type-select">
-                
-                <option value="point">(Legacy) Point</option>
-                <option value="marker">(Legacy) Marker</option>
-                <option value="target">(Legacy) Target</option>
-                <option value="bomb-target">(Legacy) Bombing Target</option>
-                <option value="combat">(Legacy) Combat</option>
-                <option value="ground-combat">(Legacy) Ground Combat</option>
-                <option value="takeoff">(Legacy) Takeoff</option>
-                <option value="landing">(Legacy) Landing</option>
-                <option value="base">(Legacy) Base</option>
-                <option value="plane">(Legacy) Aircraft</option>
+            <select class="u-full-width" id="point-type-select" is="ms-dropdown" data-child-height="500" data-enable-auto-filter="false">
+                <optgroup label="Legacy"></optgroup>
+                    <option value="point" data-image="img/black-point.png">Point</option>
+                    <option value="marker" data-image="img/black-marker.png">Marker</option>
+                    <option value="target" data-image="img/black-target.png">Target</option>
+                    <option value="bomb-target" data-image="img/black-bomb-target.png">Bombing Target</option>
+                    <option value="combat" data-image="img/black-combat.png">Combat</option>
+                    <option value="ground-combat" data-image="img/black-ground-combat.png">Ground Combat</option>
+                    <option value="takeoff" data-image="img/black-takeoff.png">Takeoff</option>
+                    <option value="landing" data-image="img/black-landing.png">Landing</option>
+                    <option value="base" data-image="img/black-base.png">Base</option>
+                    <option value="plane" data-image="img/black-plane.png">Aircraft</option>
+                </optgroup>
 
-                <option value="apollo-airfield">(Apollo) Airfield</option>
-                <option value="apollo-airfield-nw">(Apollo) Airfield NW</option>
-                <option value="apollo-base">(Apollo) Base</option>
-                <option value="apollo-bridge">(Apollo) Bridge</option>
-                <option value="apollo-defenses">(Apollo) Defenses</option>
-                <option value="apollo-engineer">(Apollo) Engineer</option>
-                <option value="apollo-industrial">(Apollo) Industrial</option>
-                <option value="apollo-naval">(Apollo) Naval</option>
-                <option value="apollo-tank">(Apollo) Tank</option>
-                <option value="apollo-target">(Apollo) Target</option>
-                <option value="apollo-train">(Apollo) Train</option>
-                <option value="apollo-train-with-carriages">(Apollo) Train With Carriages</option>
-                <option value="apollo-truck">(Apollo) Truck</option>
+                <optgroup label="Apollo"></optgroup>
+                    <option value="apollo-airfield" data-image="img/black-apollo-airfield.png">Airfield</option>
+                    <option value="apollo-airfield-nw" data-image="img/black-apollo-airfield-nw.png">Airfield NW</option>
+                    <option value="apollo-base" data-image="img/black-apollo-base.png">Base</option>
+                    <option value="apollo-bridge" data-image="img/black-apollo-bridge.png">Bridge</option>
+                    <option value="apollo-defenses" data-image="img/black-apollo-defenses.png">Defenses</option>
+                    <option value="apollo-engineer" data-image="img/black-apollo-engineer.png">Engineer</option>
+                    <option value="apollo-industrial" data-image="img/black-apollo-industrial.png">Industrial</option>
+                    <option value="apollo-naval" data-image="img/black-apollo-naval.png">Naval</option>
+                    <option value="apollo-tank" data-image="img/black-apollo-tank.png">Tank</option>
+                    <option value="apollo-target" data-image="img/black-apollo-target.png">Target</option>
+                    <option value="apollo-train" data-image="img/black-apollo-train.png">Train</option>
+                    <option value="apollo-train-with-carriages" data-image="img/black-apollo-train-with-carriages.png">Train With Carriages</option>
+                    <option value="apollo-truck" data-image="img/black-apollo-truck.png">Truck</option>
+                </optgroup>
 
-                <option value="stock-aircraft">(Stock) Aircraft</option>
-                <option value="stock-bomber">(Stock) Bomber</option>
-                <option value="stock-heavy-bomber">(Stock) Heavy Bomber</option>
-                <option value="stock-anti-air">(Stock) Anti-Air</option>
-                <option value="stock-artillery">(Stock) Artillery</option>
-                <option value="stock-ship">(Stock) Ship</option>
-                <option value="stock-tank">(Stock) Tank</option>
-                <option value="stock-tanks">(Stock) Tanks</option>
-                <option value="stock-truck">(Stock) Truck</option>
-                <option value="stock-trucks">(Stock) Trucks</option>
-                <option value="stock-train">(Stock) Train</option>
-                <option value="stock-train-station">(Stock) Train Station</option>
-                <option value="stock-encampment">(Stock) Encampment</option>
-                <option value="stock-patrol">(Stock) Patrol</option>
-                <option value="stock-waypoint">(Stock) Waypoint</option>
-                <option value="stock-buildings">(Stock) Buildings</option>
-                <option value="stock-bridge">(Stock) Bridge</option>
-                <option value="stock-cargo">(Stock) Cargo</option>
-                <option value="stock-cargo-drop">(Stock) Cargo Drop</option>
-                <option value="stock-paratroopers">(Stock) Paratroopers</option>
-                <option value="stock-aircraft-square">(Stock) Aircraft Square</option>
-                <option value="stock-air-encounter">(Stock) Air Encounter</option>
-                <option value="stock-large-air-encounter">(Stock) Large Air Encounter</option>
-                <option value="stock-balloon">(Stock) Balloon</option>
-                <option value="stock-v1-launch-site">(Stock) V1 Launch Site</option>
-                <option value="stock-v1-missle">(Stock) V1 Missle</option>
-                <option value="stock-plane-at-enemy-coast">(Stock) Plane At Enemy Coast</option>
-                <option value="stock-bomber-at-enemy-coast">(Stock) Bomber At Enemy Coast</option>
-                <option value="stock-plane-at-friendly-coast">(Stock) Plane At Friendly Coast</option>
+                <optgroup label="Stock"></optgroup>
+                    <option value="stock-aircraft" data-image="img/blue-stock-aircraft.png">Aircraft</option>
+                    <option value="stock-bomber" data-image="img/blue-stock-bomber.png">Bomber</option>
+                    <option value="stock-heavy-bomber" data-image="img/blue-stock-heavy-bomber.png">Heavy Bomber</option>
+                    <option value="stock-anti-air" data-image="img/blue-stock-anti-air.png">Anti-Air</option>
+                    <option value="stock-artillery" data-image="img/blue-stock-artillery.png">Artillery</option>
+                    <option value="stock-ship" data-image="img/blue-stock-ship.png">Ship</option>
+                    <option value="stock-tank" data-image="img/blue-stock-tank.png">Tank</option>
+                    <option value="stock-tanks" data-image="img/blue-stock-tanks.png">Tanks</option>
+                    <option value="stock-truck" data-image="img/blue-stock-truck.png">Truck</option>
+                    <option value="stock-trucks" data-image="img/blue-stock-trucks.png">Trucks</option>
+                    <option value="stock-train" data-image="img/blue-stock-train.png">Train</option>
+                    <option value="stock-train-station" data-image="img/blue-stock-train-station.png">Train Station</option>
+                    <option value="stock-encampment" data-image="img/blue-stock-encampment.png">Encampment</option>
+                    <option value="stock-patrol" data-image="img/blue-stock-patrol.png">Patrol</option>
+                    <option value="stock-waypoint" data-image="img/blue-stock-waypoint.png">Waypoint</option>
+                    <option value="stock-buildings" data-image="img/blue-stock-buildings.png">Buildings</option>
+                    <option value="stock-bridge" data-image="img/blue-stock-bridge.png">Bridge</option>
+                    <option value="stock-cargo" data-image="img/blue-stock-cargo.png">Cargo</option>
+                    <option value="stock-cargo-drop" data-image="img/blue-stock-cargo-drop.png">Cargo Drop</option>
+                    <option value="stock-paratroopers" data-image="img/blue-stock-paratroopers.png">Paratroopers</option>
+                    <option value="stock-aircraft-square" data-image="img/blue-stock-aircraft-square.png">Aircraft Square</option>
+                    <option value="stock-air-encounter" data-image="img/blue-stock-air-encounter.png">Air Encounter</option>
+                    <option value="stock-large-air-encounter" data-image="img/blue-stock-large-air-encounter.png">Large Air Encounter</option>
+                    <option value="stock-balloon" data-image="img/blue-stock-balloon.png">Balloon</option>
+                    <option value="stock-v1-launch-site" data-image="img/blue-stock-v1-launch-site.png">V1 Launch Site</option>
+                    <option value="stock-v1-missle" data-image="img/blue-stock-v1-missle.png">V1 Missle</option>
+                    <option value="stock-plane-at-enemy-coast" data-image="img/blue-stock-plane-at-enemy-coast.png">Plane At Enemy Coast</option>
+                    <option value="stock-bomber-at-enemy-coast" data-image="img/blue-stock-bomber-at-enemy-coast.png">Bomber At Enemy Coast</option>
+                    <option value="stock-plane-at-friendly-coast" data-image="img/blue-stock-plane-at-friendly-coast.png">Plane At Friendly Coast</option>
 
-                <option value="stock-ussr-plane-spawn">(Stock) USSR Plane Spawn</option>
-                <option value="stock-british-plane-spawn">(Stock) British Plane Spawn</option>
-                <option value="stock-usa-plane-spawn">(Stock) USA Plane Spawn</option>
-                <option value="stock-german-plane-spawn">(Stock) German Plane Spawn</option>
-                <option value="stock-italian-plane-spawn">(Stock) Italian Plane Spawn</option>
-                <option value="stock-japanese-plane-spawn">(Stock) Japanese Plane Spawn</option>
-                <option value="stock-fc-russia-plane-spawn">(Stock) FC Russia Plane Spawn</option>
-                <option value="stock-fc-usa-plane-spawn">(Stock) FC USA Plane Spawn</option>
-                <option value="stock-fc-britian-plane-spawn">(Stock) FC Britian Plane Spawn</option>
-                <option value="stock-fc-germany-plane-spawn">(Stock) FC Germany Plane Spawn</option>
-                <option value="stock-fc-france-plane-spawn">(Stock) FC France Plane Spawn</option>
-                <option value="stock-fc-belgium-plane-spawn">(Stock) FC Belgium Plane Spawn</option>
-                <option value="stock-fc-austria-hungary-plane-spawn">(Stock) FC Austria Hungary Plane Spawn</option>
-                
-                <option value="stock-ussr-tank-spawn">(Stock) USSR Tank Spawn</option>
-                <option value="stock-british-tank-spawn">(Stock) British Tank Spawn</option>
-                <option value="stock-usa-tank-spawn">(Stock) USA Tank Spawn</option>
-                <option value="stock-german-tank-spawn">(Stock) German Tank Spawn</option>
-                <option value="stock-italian-tank-spawn">(Stock) Italian Tank Spawn</option>
-                <option value="stock-japanese-tank-spawn">(Stock) Japanese Tank Spawn</option>
-                <option value="stock-fc-russia-tank-spawn">(Stock) FC Russia Tank Spawn</option>
-                <option value="stock-fc-britian-tank-spawn">(Stock) FC Britian Tank Spawn</option>
-                <option value="stock-fc-usa-tank-spawn">(Stock) FC USA Tank Spawn</option>
-                <option value="stock-fc-germany-tank-spawn">(Stock) FC Germany Tank Spawn</option>
-                <option value="stock-fc-france-tank-spawn">(Stock) FC France Tank Spawn</option>
-                <option value="stock-fc-belgium-tank-spawn">(Stock) FC Belgium Tank Spawn</option>
-                <option value="stock-fc-austria-hungary-tank-spawn">(Stock) FC Austria Hungary Tank Spawn</option>
+                    <option value="stock-ussr-plane-spawn" data-image="img/stock-ussr-plane-spawn.png">USSR Plane Spawn</option>
+                    <option value="stock-british-plane-spawn" data-image="img/stock-british-plane-spawn.png">British Plane Spawn</option>
+                    <option value="stock-usa-plane-spawn" data-image="img/stock-usa-plane-spawn.png">USA Plane Spawn</option>
+                    <option value="stock-german-plane-spawn" data-image="img/stock-german-plane-spawn.png">German Plane Spawn</option>
+                    <option value="stock-italian-plane-spawn" data-image="img/stock-italian-plane-spawn.png">Italian Plane Spawn</option>
+                    <option value="stock-japanese-plane-spawn" data-image="img/stock-japanese-plane-spawn.png">Japanese Plane Spawn</option>
+                    <option value="stock-fc-russia-plane-spawn" data-image="img/stock-fc-russia-plane-spawn.png">FC Russia Plane Spawn</option>
+                    <option value="stock-fc-usa-plane-spawn" data-image="img/stock-fc-usa-plane-spawn.png">FC USA Plane Spawn</option>
+                    <option value="stock-fc-britian-plane-spawn" data-image="img/stock-fc-britian-plane-spawn.png">FC Britian Plane Spawn</option>
+                    <option value="stock-fc-germany-plane-spawn" data-image="img/stock-fc-germany-plane-spawn.png">FC Germany Plane Spawn</option>
+                    <option value="stock-fc-france-plane-spawn" data-image="img/stock-fc-france-plane-spawn.png">FC France Plane Spawn</option>
+                    <option value="stock-fc-belgium-plane-spawn" data-image="img/stock-fc-belgium-plane-spawn.png">FC Belgium Plane Spawn</option>
+                    <option value="stock-fc-austria-hungary-plane-spawn" data-image="img/stock-fc-austria-hungary-plane-spawn.png">FC Austria Hungary Plane Spawn</option>
+                    
+                    <option value="stock-ussr-tank-spawn" data-image="img/stock-ussr-tank-spawn.png">USSR Tank Spawn</option>
+                    <option value="stock-british-tank-spawn" data-image="img/stock-british-tank-spawn.png">British Tank Spawn</option>
+                    <option value="stock-usa-tank-spawn" data-image="img/stock-usa-tank-spawn.png">USA Tank Spawn</option>
+                    <option value="stock-german-tank-spawn" data-image="img/stock-german-tank-spawn.png">German Tank Spawn</option>
+                    <option value="stock-italian-tank-spawn" data-image="img/stock-italian-tank-spawn.png">Italian Tank Spawn</option>
+                    <option value="stock-japanese-tank-spawn" data-image="img/stock-japanese-tank-spawn.png">Japanese Tank Spawn</option>
+                    <option value="stock-fc-russia-tank-spawn" data-image="img/stock-fc-russia-tank-spawn.png">FC Russia Tank Spawn</option>
+                    <option value="stock-fc-britian-tank-spawn" data-image="img/stock-fc-britian-tank-spawn.png">FC Britian Tank Spawn</option>
+                    <option value="stock-fc-usa-tank-spawn" data-image="img/stock-fc-usa-tank-spawn.png">FC USA Tank Spawn</option>
+                    <option value="stock-fc-germany-tank-spawn" data-image="img/stock-fc-germany-tank-spawn.png">FC Germany Tank Spawn</option>
+                    <option value="stock-fc-france-tank-spawn" data-image="img/stock-fc-france-tank-spawn.png">FC France Tank Spawn</option>
+                    <option value="stock-fc-belgium-tank-spawn" data-image="img/stock-fc-belgium-tank-spawn.png">FC Belgium Tank Spawn</option>
+                    <option value="stock-fc-austria-hungary-tank-spawn" data-image="img/stock-fc-austria-hungary-tank-spawn.png">FC Austria Hungary Tank Spawn</option>
+                </optgroup>
 
-                <option value="re-af">(Random Expert) Airfield</option>
-                <option value="re-art">(Random Expert) Artillery</option>
-                <option value="re-hq">(Random Expert) Headquarters</option>
-                <option value="re-motorcade">(Random Expert) Motorcade</option>
-                <option value="re-point-active">(Random Expert) Active Point</option>
-                <option value="re-point">(Random Expert) Point</option>
-                <option value="re-tanks">(Random Expert) Tank</option>
-                <option value="re-warehouse">(Random Expert) Warehouse</option>
-                <option value="re-fort">(Random Expert) Fort</option>
+                <optgroup label="Random Expert"></optgroup>
+                    <option value="re-af" data-image="img/blue-re-af.png">Airfield</option>
+                    <option value="re-art" data-image="img/blue-re-art.png">Artillery</option>
+                    <option value="re-hq" data-image="img/blue-re-hq.png">Headquarters</option>
+                    <option value="re-motorcade" data-image="img/blue-re-motorcade.png">Motorcade</option>
+                    <option value="re-point-active" data-image="img/blue-re-point-active.png">Active Point</option>
+                    <option value="re-point" data-image="img/blue-re-point.png">Point</option>
+                    <option value="re-tanks" data-image="img/blue-re-tanks.png">Tank</option>
+                    <option value="re-warehouse" data-image="img/blue-re-warehouse.png">Warehouse</option>
+                    <option value="re-fort" data-image="img/blue-re-fort.png">Fort</option>
+                </optgroup>
 
-                <option value="taw-af">(TAW) Airfield</option>
-                <option value="taw-arta">(TAW) Artillery</option>
-                <option value="taw-bridge">(TAW) Bridge</option>
-                <option value="taw-city">(TAW) City</option>
-                <option value="taw-def">(TAW) Defenses</option>
-                <option value="taw-depo">(TAW) Depot</option>
-                <option value="taw-supply">(TAW) Supply</option>
-                <option value="taw-tank">(TAW) Tank</option>
-                <option value="taw-train">(TAW) Train</option>
+                <optgroup label="TAW"></optgroup>
+                    <option value="taw-af" data-image="img/blue-taw-af.png">Airfield</option>
+                    <option value="taw-arta" data-image="img/blue-taw-arta.png">Artillery</option>
+                    <option value="taw-bridge" data-image="img/blue-taw-bridge.png">Bridge</option>
+                    <option value="taw-city" data-image="img/blue-taw-city.png">City</option>
+                    <option value="taw-def" data-image="img/blue-taw-def.png">Defenses</option>
+                    <option value="taw-depo" data-image="img/blue-taw-depo.png">Depot</option>
+                    <option value="taw-supply" data-image="img/blue-taw-supply.png">Supply</option>
+                    <option value="taw-tank" data-image="img/blue-taw-tank.png">Tank</option>
+                    <option value="taw-train" data-image="img/blue-taw-train.png">Train</option>
+                </optgroup>
             </select>
         </div>
         <div class="row">
